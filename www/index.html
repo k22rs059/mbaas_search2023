@@ -69,14 +69,14 @@
 
     function showResults(results) {
       // テーブルのヘッダを生成
-      let msg = "<table><tr><th>subject</th><th>result</th><th>grade</th><th>defence</th></tr>";
+      let msg = "<table><tr><th>subject</th><th>result</th><th>value</th><th>grade</th></tr>";
       for (let i = 0; i < results.length; i++) {
         // 各データを収めた表の列を生成
         msg += "<tr>";
         msg += "<td>" + results[i].subject + "</td>";
         msg += "<td class='num'>" + results[i].result + "</td>";
+        msg += "<td class='num'>" + results[i].value + "</td>";
         msg += "<td class='num'>" + results[i].grade + "</td>";
-        msg += "<td class='num'>" + results[i].defence + "</td>";
         msg += "</tr>";
       }
       // テーブルのテイラを生成
