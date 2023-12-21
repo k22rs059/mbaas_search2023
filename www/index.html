@@ -34,33 +34,33 @@
         })
     }
 
-    function searchLevel() {
-        let level = parseInt($("#level").val());
+    function searchValue() {
+        let value = parseInt($("#value").val());
       let TestDataClass = ncmb.DataStore(db);
       TestDataClass
-      .equalTo("level",level)
+      .equalTo("value",value)
       .fetchAll()
       .then(function(results) {
           showResults(results);
         })
     }
 
-    function searchLevelLT() {
-        let level = parseInt($("#level").val());
+    function searchValueLT() {
+        let value = parseInt($("#value").val());
       let TestDataClass = ncmb.DataStore(db);
       TestDataClass
-      .lessThan("level",level)
+      .lessThan("valuel",value)
       .fetchAll()
       .then(function(results) {
           showResults(results);
         })
     }
 
-    function searchLevelGT() {
-        let level = parseInt($("#level").val());
+    function searchValueGT() {
+        let value = parseInt($("#value").val());
       let TestDataClass = ncmb.DataStore(db);
       TestDataClass
-      .greaterThan("level",level)
+      .greaterThan("value",value)
       .fetchAll()
       .then(function(results) {
           showResults(results);
@@ -93,16 +93,16 @@
     <input id="subject" type="text" placeholder="subject">
   </div>
   <div>
-    <label for="result">result:</label>
-    <input id="result" type="number" placeholder="result">
+    <label for="value">value:</label>
+    <input id="value" type="number" placeholder="value">
   </div>
   <div id="button">
     <button class="btn" onclick="fetchAll()">Fetch All</button>
     <button class="btn" onclick="searchSubject()">Subject</button>
     <br>
-    <button class="btn" onclick="searchLevelLT()">Level &lt;</button>
-    <button class="btn" onclick="searchLevel()">Level</button>
-    <button class="btn" onclick="searchLevelGT()">Level &gt;</button>
+    <button class="btn" onclick="searchValueLT()">Value &lt;</button>
+    <button class="btn" onclick="searchValue()">Value</button>
+    <button class="btn" onclick="searchValueGT()">Value &gt;</button>
   </div>
   <div id="message">message area</div>
 </body>
