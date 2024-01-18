@@ -49,7 +49,7 @@
         let value = parseInt($("#value").val());
       let TestDataClass = ncmb.DataStore(db);
       TestDataClass
-      .lessThan("valuel",value)
+      .lessThan("value",value)
       .fetchAll()
       .then(function(results) {
           showResults(results);
@@ -66,6 +66,18 @@
           showResults(results);
         })
     }
+
+     function GPA(results) {
+       let value = parseInt($("#value").val());
+      let TestDataClass = ncmb.DataStore(db);
+                var sum = 0;
+      for (let i = 0; i < 7; i++) {
+          sum += results[i].value;
+     }
+      var gpa = sum / 7;
+        $("#GPA").html("あなたのGPAは" + gpa + "です。");
+    }
+
 
     function showResults(results) {
       // テーブルのヘッダを生成
@@ -107,6 +119,7 @@
     <button class="btn" onclick="GPA()">GPA</button>
   </div>
   <div id="message">message area</div>
+  <div id="GPA">あなたのGPAは</div>
 </body>
 
 </html>
