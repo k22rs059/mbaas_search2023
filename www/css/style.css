@@ -1,9 +1,9 @@
 /**/
 body {
-  background-color: aqua;
+  background-color:whitesmoke;
 }
 h1 {
-  background-color: yellow;
+  background-color: rgba(0, 0, 255, 0.515);
 }
 
 label {

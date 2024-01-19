@@ -23,7 +23,7 @@
         })
     }
 
-    function searchSubjectf() {
+    function searchSubject() {
         let subject = $("#subject").val();
       let TestDataClass = ncmb.DataStore(db);
       TestDataClass
@@ -68,13 +68,9 @@
     }
 
      function GPA(results) {
-       let value = parseInt($("#value").val());
+      // let value = parseInt($("#value").val());
       let TestDataClass = ncmb.DataStore(db);
-                var sum = 0;
-      for (let i = 0; i < 7; i++) {
-          sum += results[i].value;
-     }
-      var gpa = sum / 7;
+      var gpa = 3.4;
         $("#GPA").html("あなたのGPAは" + gpa + "です。");
     }
 
